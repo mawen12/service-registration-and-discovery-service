@@ -4,8 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <modules>
-        <module>eureka-client</module>
-        <module>eureka-service</module>
+        <module>eureka/eureka-client</module>
+        <module>eureka/eureka-service</module>
+        <module>eureka-server-cluster/eureka-server-peer</module>
+        <module>eureka-client-peer</module>
+        <module>eureka-server-cluster/eureka-client-peer</module>
     </modules>
 
     <parent>
@@ -28,6 +31,7 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
+        <lombok.version>1.18.16</lombok.version>
     </properties>
 
     <dependencyManagement>
@@ -38,6 +42,13 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
