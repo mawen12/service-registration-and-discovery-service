@@ -4,8 +4,8 @@ spring:
 
 eureka:
   client:
-#    fetch-registry: true
-#    register-with-eureka: true
+    fetch-registry: false
+    register-with-eureka: true
     serviceUrl:
       defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/,http://peer3:8763/eureka/
 
